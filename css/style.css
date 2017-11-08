@@ -1,0 +1,53 @@
+/* -------------------------------- 
+
+Main Components 
+
+-------------------------------- */
+form {
+  width: 90%;
+  max-width: 600px;
+  margin-top: 2em;
+  margin-left: 5%;
+}
+
+fieldset {
+  margin-bottom: 1em;
+}
+
+.js .nc-button-wrapper {
+  position: relative;
+}
+
+.js .nc-button-wrapper input[type=radio],
+.js .nc-button-wrapper input[type=checkbox] {
+  /* hide native checkbx and radio input if javascrips is enabled */
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+
+.nc-button-wrapper svg {
+  /* svg icon is hidden by default */
+  display: none;
+}
+
+.js .nc-button-wrapper svg {
+  /* show custom svg icon if javascrips is enabled */
+  display: block;
+  position: absolute;
+  /* IE9 and IE10 support pointer-events on SVG elements while they don't support it on HTML elements */
+  pointer-events: none;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.js .nc-button-wrapper label {
+  position: relative;
+  padding-left: 20px;
+}
